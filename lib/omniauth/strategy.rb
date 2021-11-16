@@ -484,6 +484,7 @@ module OmniAuth
 
       if exception
         log :error, "Authentication failure! #{message_key}: #{exception.class}, #{exception.message}"
+        raise exception
       else
         log :error, "Authentication failure! #{message_key} encountered."
       end
